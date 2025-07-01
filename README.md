@@ -55,14 +55,14 @@ graph LR
 flowchart TD
     A[Input Test Scores] --> B[Compute Mean of x]
     A --> C[Compute Mean of y]
-    B --> D[Compute x - x̄]
-    C --> E[Compute y - ȳ]
-    D --> F[Compute (x - x̄)²]
-    D --> G[Compute (x - x̄)(y - ȳ)]
+    B --> D[Compute x deviations]
+    C --> E[Compute y deviations]
+    D --> F[Compute squares of x deviations]
+    D --> G[Compute products of deviations]
     E --> G
-    F --> H[Sum (x - x̄)²]
-    G --> I[Sum (x - x̄)(y - ȳ)]
-    H --> J[Calculate m = Numerator/Denominator]
+    F --> H[Sum squares of x deviations]
+    G --> I[Sum products of deviations]
+    H --> J[Calculate m = I/H]
     I --> J
     J --> K[Round to Three Decimal Places]
     
